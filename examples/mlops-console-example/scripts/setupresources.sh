@@ -43,7 +43,7 @@ aws iam attach-role-policy --role-name $IAM_ROLE_NAME \
   --policy-arn arn:aws:iam::aws:policy/AmazonSageMakerFullAccess
 
 # Update trust relationship
-echo "Updating trust relationship for Greengrass TES Role to allow Sagemaker"
+echo "Updating trust relationship for Greengrass TES Role to access SageMaker"
 aws iam update-assume-role-policy --role-name $IAM_ROLE_NAME \
  --policy-document $ASSUME_POLICY_DOCUMENT_IOT_SAGEMAKER
 
